@@ -1,0 +1,8 @@
+div.exp{/*學習經歷下區塊*/
+	display: flex;
+	justify-content: center;
+}
+div.exp>div{
+	margin: 10px 25px;
+}
+div.exp>div img{border-radius: 50%;}

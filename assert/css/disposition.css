@@ -1,0 +1,28 @@
+.dis{
+font-family: 微軟正黑體;
+font-size: 23px;
+list-style: none;
+}
+ul.dis ul{
+list-style: none;margin:0;
+display: none;
+}
+.dis li li{
+background-color: lightyellow;
+border-radius: 10px;
+text-align: center;
+padding: 10px 20px;
+box-shadow: 0 0 5px #ca8c32;
+margin-right: 5px;
+border: white 1px solid;
+}
+.dis span{
+background-color: lightyellow;
+border-radius: 10px;
+padding: 10px 30px;
+box-shadow: 0 0 5px #322f2f;
+border: white 1px solid;
+}
+.dis>li:hover >ul{
+display: inline-flex;
+}

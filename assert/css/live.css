@@ -1,0 +1,38 @@
+.live table img{
+width:450px;
+height:337px;
+}
+.live table td{
+padding:20px;
+}
+.live table{
+margin: 60px auto;
+padding-bottom: 50px;
+}
+.live h3{
+margin-top: 0;
+padding-top: 50px;
+text-align: center;
+}
+.mask{
+border-radius:10px;
+z-index:5;
+width:450px;
+height:337px;
+opacity:0;
+position:absolute;
+top:20px;
+transition:opacity 0.5s;
+background-image: linear-gradient(to bottom right, rgba(110, 200, 251, 0.55),rgba(255, 190, 88, 0.58));
+}
+.mask:hover{
+opacity:1;
+}
+.live h5{
+font-family: cwtexyen,微軟正黑體;
+font-size: 40px;
+text-align: center;
+position: relative;
+color: white;
+top: 80px;
+}

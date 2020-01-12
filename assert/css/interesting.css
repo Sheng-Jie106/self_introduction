@@ -1,0 +1,56 @@
+.int ul{
+list-style: none;
+}
+.int ul li span{
+font-family: 標楷體;
+font-weight: 700;
+}
+.int ul li ul{
+line-height: 44px;
+font-family: 微軟正黑體;
+}
+.int ul li ul li>img{
+transform: rotate(90deg);
+width: 33px;
+position: relative;
+top: 0px;
+}
+div.inter{/*興趣與作品*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.int div>div{
+	margin: 30px 90px;
+}
+.item img{
+width:213px;
+height: 164px;
+}
+.item span{
+font-family: 微軟正黑體;
+padding-bottom: 10px;
+}
+img.up:hover{
+background-color:#9b9b9b;
+width: 520px;
+height: auto;
+box-shadow: 0 0 20px gray;
+z-index:5;
+position:absolute;top:0;
+transition-duration: 400ms;
+}
+img.hoop:hover{
+width:405px;
+height: auto;
+position:absolute;top:0;
+z-index:5;
+transition-duration: 400ms;
+box-shadow: 0 0 20px gray;
+}
+div.item table td{/*作品內td寬度*/
+	width: 213px;
+}
+.item tr:nth-child(1){
+	text-align: center;
+}

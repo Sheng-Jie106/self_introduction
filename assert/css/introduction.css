@@ -1,0 +1,33 @@
+.self table{
+margin: 0 auto;
+padding: 4%;
+width: 60%;
+}
+.self h3{
+font-size: 39px;
+}
+.self p{
+font-family: 微軟正黑體;
+font-size: 22px;
+line-height: 46px;
+}
+.self img{
+border-radius: 10px;
+width:385px;
+}
+.self img:hover{
+transform: rotate(12deg);
+transition-duration: 500ms;
+}
+.self div{
+padding:20px 0;
+}
+.sel{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.svg{
+position: relative;
+top: 8px;
+}
