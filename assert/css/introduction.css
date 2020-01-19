@@ -19,9 +19,6 @@ width:385px;
 transform: rotate(12deg);
 transition-duration: 500ms;
 }
-.self div{
-padding:20px 0;
-}
 .sel{
 display: flex;
 justify-content: center;

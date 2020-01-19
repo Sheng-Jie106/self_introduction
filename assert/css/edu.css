@@ -1,6 +1,7 @@
 div.exp{/*學習經歷下區塊*/
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 div.exp>div{
 	margin: 10px 25px;
