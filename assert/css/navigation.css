@@ -1,47 +1,48 @@
-nav{
-width:100%;
-position: fixed;
-top: 0;
-left: 0;
-z-index: 10;
-background-color: #585858f0;
-box-shadow: 1px 2px 8px white;
-}
-nav>span>a{
-text-decoration: none;
-padding: 20px 10px;
-font-size: 26px;
-float:right;
-color:#b9b9b9;
-font-family: 微軟正黑體;
-}
-nav>span>a:hover{
-color:white;
-}
-hr.one {
-width: 90%;
-margin: 50px auto 50px 0px;
-border: 0;
-height: 3px;
-background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-}
-.name{
-float: left;
-padding-left:80px;
-}
-.down{
-position: relative;
-left: 50%;
-margin: 0px auto 64px;
-padding: 15px;
-font-size: 18px;
-border: 2px solid #f09b01;
-background-color: white;
-border-radius: 10px;
-font-family: 微軟正黑體;
-width:90px;
-}
-input:hover{
-background-color: orange;
-color:white;
-}
+
+			nav{
+                width:100%; 
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 10;
+                background-color: #585858f0;
+                box-shadow: 1px 2px 8px white;
+                }
+                            nav ul{
+                                    float: right;
+                                    display: flex;
+                                    list-style: none;
+                                    margin-right: 40px;
+                                }
+                            nav a{
+                                text-decoration: none;
+                                padding: 5px 10px;
+                                font-size: 26px;
+                                color:#b9b9b9;
+                                font-family: 微軟正黑體;
+                            }
+                            nav a:hover{
+                                color:white;
+                            }
+                            .name{
+                                padding-left:80px;
+                            }
+                            .icon-bar{
+                                width: 40px;
+                                height: 3px;
+                                background-color: white;
+                                display: block;
+                                margin: 18px;
+                                border-radius: 10px;
+                            }
+                            .nav-btn{
+                                background-color: #00000000;
+                                border: 0;
+                                height: 82px;
+                                float: right;
+                                display: none;
+                                transition-duration: 0.5s;
+                            }
+                            .nav-btn:hover{
+                                background-color: black;
+                            }

@@ -1,16 +1,14 @@
-.act div>div{
-display: flex;
-justify-content: center;
-align-items: stretch;
+.act>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
-.act div>div>div{
-flex:none;
-justify-content: center;
-margin:0px 40px 60px;
+.act>div>div{
+    margin: 10px 10px;
 }
 .act img{
 width: 200px;
-height: 133px;
 }
 .act h3{
 padding-top: 50px;
@@ -25,31 +23,4 @@ margin-bottom: 0px;
 .act p{
 font-family: 微軟正黑體;
 font-size: 22px;
-}
-.table img:hover{
-width: 520px;
-height: auto;
-z-index: 5;
-position: absolute;
-top:0px;
-transition-duration: 400ms;
-box-shadow: 0 0 20px gray;
-}
-.chris img:hover {
-width: 520px;
-height: auto;
-z-index: 5;
-position: absolute;
-top:0px;
-transition-duration: 400ms;
-box-shadow: 0 0 20px gray;
-}
-.chris img.chris2:hover{
-width: 520px;
-height: auto;
-z-index: 5;
-position: absolute;
-top:0px;
-transition-duration: 400ms;
-box-shadow: 0 0 20px gray;
 }

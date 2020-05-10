@@ -2,8 +2,64 @@ div.exp{/*學習經歷下區塊*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
 div.exp>div{
 	margin: 10px 25px;
 }
 div.exp>div img{border-radius: 50%;}
+
+/*個人資訊樣式*/
+
+hr.one {
+	width: 90%;
+	margin: 50px auto 50px 0px;
+	border: 0;
+	height: 3px;
+	background-image: linear-gradient(to right, #ff858540, rgb(255, 199, 178), rgba(0, 0, 0, 0));
+	}
+	.down{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%,0);
+	padding: 15px;
+	font-size: 18px;
+	border: 2px solid #f09b01;
+	background-color: white;
+	border-radius: 10px;
+	font-family: 微軟正黑體;
+	width:90px;
+	}
+	input:hover{
+	background-color: orange;
+	color:white;
+	}
+	
+	.self h3{
+	font-size: 39px;
+	}
+	.self p{
+	font-family: 微軟正黑體;
+	font-size: 22px;
+	line-height: 46px;
+	}
+	.self img{
+	border-radius: 10px;
+	}
+	.self img:hover{
+	transform: rotate(12deg);
+	transition-duration: 500ms;
+	}
+	.sel{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	}
+	.sel div{
+		margin: 0 10px;
+	}
+	.svg{
+	position: relative;
+	top: 8px;
+	}

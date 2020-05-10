@@ -1,18 +1,19 @@
-.live table img{
+.live img{
 width:450px;
-height:337px;
-}
-.live table td{
-padding:20px;
-}
-.live table{
-margin: 60px auto;
-padding-bottom: 50px;
 }
 .live h3{
 margin-top: 0;
 padding-top: 50px;
 text-align: center;
+}
+.live div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.live figcaption{
+    margin: 40px;
+    position: relative;
 }
 .mask{
 border-radius:10px;
@@ -21,7 +22,7 @@ width:450px;
 height:337px;
 opacity:0;
 position:absolute;
-top:20px;
+top:0px;
 transition:opacity 0.5s;
 background-image: linear-gradient(to bottom right, rgba(110, 200, 251, 0.55),rgba(255, 190, 88, 0.58));
 }
