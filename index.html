@@ -25,14 +25,15 @@
 				position: fixed;
 				top:50%;
 				display: block;
+				z-index: 5;
 			}
 			article,section{
 				background-image:linear-gradient(to bottom, rgb(205, 237, 255),rgb(255, 215, 143));
-				width: 90%;
+				width: 80%;
 				margin: 0 auto;
 				border-radius: 10px;
 				opacity: 0.8;
-				transition-duration: 350ms;
+				transition-duration: 500ms;
 				padding-top: 0.1px;
 			}
 			.aaa{
@@ -105,6 +106,20 @@
 				.excep img.towda{
 					margin-bottom:30px ;
 				}
+				p.int-p{
+					width: 100%;
+					margin: 20px;
+				}
+				div.item{
+					position: relative;
+					transform: rotateX(0);
+				}
+				div.item img{
+					transform: rotate3d(0, 1, 0, 0deg) translate3d(0, 0px, 0px) rotate(0deg);
+				}
+				.item:hover img {
+					transform: rotate3d(0, 1, 0, 90deg) translate3d(0%, 0px, 0px) rotate(-20deg);
+				}
 			}
 			@media(max-width:1133px){
 				nav ul{
@@ -129,9 +144,10 @@
 				.sel-img{
 					width: 100%;
 				}
-				.item figcaption{
-					width: auto;
+				.item img{
+					width: 90%!important;
 				}
+				
 			}
 			@media(max-width: 500px){
 				.name{
@@ -184,12 +200,11 @@
 		<img src=assert/img/name.png class=name>
 		<ul id=nav-in>
 			<li><a href=#1>個人資料</a></li>
-			<li><a href=#6>學習歷程</a></li>
+			<li><a href=#6>專業技能</a></li>
 			<li><a href=#2>工作經驗</a></li>
-			<li><a href=#3>生活興趣</a></li>
-			<li><a href=#4>社團活動</a></li>
+			<li><a href=#3>其他興趣</a></li>
 			<li><a href=#5>未來展望</a></li>
-			<li><a href=#8>日常生活</a></li>
+			<li><a href=#8>生活照</a></li>
 		</ul>
 		<div class=nav-btn id=nav-btn onmouseover="ope()">
             <span class="icon-bar"></span>
@@ -212,7 +227,7 @@
 			<a name=1><a name=7>
 			<div>
 				<h3>個人資訊</h3>
-				<hr>
+				<!-- <hr> -->
 			</div>
 			<div class=sel>
 				<div>
@@ -220,12 +235,11 @@
 				</div>
 				<div class=mid>
 					<p>姓名:王聖杰 (Jason)<br>
-						生日:2/24<br>
 						家鄉:桃園市<br>
 						<img class=svg style="width: 34px;" src=assert/svg/phone.svg> : 09123456789<br>
 						<img class=svg style="width: 34px;" src=assert/svg/home.svg> : 中壢區普忠路210號<br>
 						<img class=svg style="width: 34px;" src=assert/svg/email.svg> : wangshengjie880<br>@gmail.com<br>
-						職業:學生<br>
+						職業:學生<span style="margin-left: 20px;text-shadow: 0 0 1px black;">桌球教練</span><br>
 						中原大學<br>
 						主修心理輔修資訊管理
 					</p>
@@ -262,102 +276,129 @@
 		<article class=aaa>
 			<a name=6></a>
 			<div>
-				<h3>學習歷程</h3>
-				<hr>
-				<p>高中的我開始用功，大學的我更是努力做好每件事，不荒廢時間!</p>
+				<h3>專業技能</h3>
+				<!-- <hr> -->
 			</div>
 			<div class=exp><!-- 學習經歷 -->
-				<div>
-					<img src=assert/img/cycu.jpg>
-					<h4>中原大學</h4>
+				<div onmouseover="show_content_p('skill_p_1')" onmouseout="hidden_content_p('skill_p_1')">
+					<img src="assert/svg/school-team.svg" alt="">
+					<h4>桌球/桌球教學</h4>
 				</div>
-				<div>
-					<img src=assert/img/yf.jpg>
-					<h4>永豐高中</h4>
+				<div onmouseover="show_content_p('skill_p_2')" onmouseout="hidden_content_p('skill_p_2')">
+					<img src="assert/svg/html.svg" style="width: 150px;" alt="">
+					<h4>網站前後端整合開發<span class=learning> 學習中</span></h4>
 				</div>
-				<div>
-					<img src=assert/img/ck.jpg>
-					<h4>建國國中</h4>
+				<div onmouseover="show_content_p('skill_p_3')" onmouseout="hidden_content_p('skill_p_3')">
+					<img src="assert/svg/internet.svg" style="width: 150px;" alt="">
+					<h4>電腦網路管理<span class=learning> 學習中</span></h4>
 				</div>
-				<div>
-					<img src=assert/img/dy.jpg>
-					<h4>大勇國小</h4>
+				<div onmouseover="show_content_p('skill_p_4')" onmouseout="hidden_content_p('skill_p_4')">
+					<img src="assert/svg/gear.svg" alt="">
+					<h4>程式設計<span class=learning> 學習中</span></h4>
 				</div>
+			</div>
+			<div class="content-p">
+				<p class=content-p id=skill_p_1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;因為父親喜歡打桌球的緣故，從小就接觸了桌球，國小曾經參加過學校社團，也很喜歡打，但因沒有固定的場地，所以一直斷斷續續的。直到國三時家裡附近的教會會有些長輩在裡面打球，才又開始了我的桌球生活，高中時開始固定到球館報到，打球的時間變得更多也變得更強，但仍舊只是非系統性的訓練。大學時加入了校隊，開始有了系統性的訓練，並將自己過去在球館所學到的各種不同球路結合，實力又有更多的增加，也和校隊的隊友們一起在大專盃、輔大盃等大小比賽拿到不錯的成績。<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;除了精進自身的實力外，我也在國小、活動中心等地方當教練。而由於從一開始接觸桌球到大學之前沒有受過專業性的訓練，許多的技術都是靠自己摸索出來，也曾走過許多錯誤的路，所以我更能了解一般初學者問題、難點，並給予方向指引，讓學習者能夠慢慢找到屬於自己的感覺、節奏，並非一股腦的將硬性的姿勢、節奏硬塞給學習者，使得學習者更能享受打桌球所帶來的快樂。</p>
+				<p class=content-p id=skill_p_2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;從很早以前開始，我就對於電腦資訊網路的傳遞感到十分的好奇，在修習相關課程時的我每當更多瞭解了網路連線、資料傳遞等知識都讓我感到非常的興奮，這也是我在大學中最喜歡的課程之一。而我相信在這個資訊大爆炸的時代，了解資料的傳輸、安全性等都是必要的能力，所以也將在這個領域中更多的著墨，在目前也將取得CCNA網路管理初階證照為目標前進。</p>
+				<p class=content-p id=skill_p_3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在大學的課程中，學習如何製作網頁以及架設網站，雖然在學習過程中非常的辛苦，但在作品得到許多的肯定時感到非常的有成就感，尤其在後端架置課程期末報告中獲得了99分的超高成績，但這些對我來說都只是個開始，開始在網站架設領域的遨遊。</p>
+				<p class=content-p id=skill_p_4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;對於程式設計從未接觸過的我，在第一次學習編寫程式時才發現自己對於程式邏輯思考上的天賦及興趣，有種相見恨晚的感覺。從這之後我在面對許多事情時總會想著如何將它程式化，需要甚麼樣的邏輯判斷，思考這些事對我來說就像在打Game一樣的好玩，不斷地想出一套邏輯來應付不同的狀況，總讓我覺得樂此不疲。在目前已javascript為重心，結合html做開發。</p>
 			</div>
 		</article>
 		<section class=aaa>
 			<a name=2></a>
 			<div>
 				<h3>工作經驗</h3>
-				<hr>
-				<p>開始打工後真實地感受了賺錢的辛苦，也讓我更加努力向上</p>
+				<!-- <hr> -->
 			</div>
 			<div class=exp><!-- 學習經歷 -->
 				<div>
 					<a href=https://sheng-jie106.github.io/self_career/ target=_blank style="text-decoration: none;color:black"><img src=assert/img/mail.png style="width: 130px;">
 					<h4 style="position: relative;top:-10px">個人履歷</h4></a>
 				</div>
-				<div>
+				<div onmouseover="show_content_p('work_1')" onmouseout="hidden_content_p('work_1')">
+					<img src=assert/img/coaching.jpg style="width: 150px;border-radius: 75px;transition-duration: 350ms;" onmouseover="{this.style.borderRadius=10+'px';}" onmouseout="{this.style.borderRadius=75+'px'}">
+					<h4>大業國小桌球校隊教練</h4>
+				</div>
+				<div onmouseover="show_content_p('work_2')" onmouseout="hidden_content_p('work_2')">
+				<img src=assert/svg/tennis.svg style="width: 150px;">
+					<h4>桌球社團教練</h4>
+				</div>
+				<div onmouseover="show_content_p('work_3')" onmouseout="hidden_content_p('work_3')">
 					<img src=assert/svg/part.svg>
 					<h4>薄膜中心工讀生</h4>
 				</div>
-				<div>
-					<img src=assert/img/rice2.png>
-					<h4>學生餐廳工讀生</h4>
-				</div>
-				<div>
+				<div onmouseover="show_content_p('work_4')" onmouseout="hidden_content_p('work_4')">
 					<img src=assert/img/gas.png>
 					<h4>加油站站員</h4>
 				</div>
-				<div>
-					<img src=assert/svg/tennis.svg>
-					<h4 style="position: relative;top:13px">桌球社團教練</h4>
-				</div>
+			</div>
+			<div class="content-p" style="height:0">
+				<p class="content-p" id=work_1>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;相較於社團輕鬆打球的氣氛，校隊注重於紀律，並且再加上球技的要求，在一開始的我會些許不適應需要扮黑臉較嚴厲的要求孩子們，但在慢慢適應後我開始找到了屬於自己的風格。也在這之中學習如何處理孩子們之間相處的問題、衝突，並教導他們事情的道理以及桌球上的技術，讓孩子們信服我的管教及執導，也認同我是他們的教練。但目前因個人生涯安排，所以暫停了這份工作。
+				</p>
+				<p class="content-p" id=work_2>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;從一開始的我要面對孩子們，並教導他們認識桌球，並建立球感是件非常困難的事情，但經過這兩年來不斷的學習，學會編排課程、發想各種不同的小遊戲、競賽、處理各種不同的狀況，也接觸越來越多不同的學員們，如今的我對於社團的教學可說是得心應手!
+				</p>
+				<p class="content-p" id=work_3>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;中原大學校內的學生工讀，主要負責打掃環境、公文公物傳遞等。平常工作內容簡單無奇，但我並沒有浪費時間，我從中了解到一個技術研究中心的運作、與學校、業界、國家的互動方式。<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;而且在這之中也驚人的發現這樣的中心，其中的財務支出、收入等竟然沒有一個妥善的軟體系統做管理，而只是用人工Excel做紀錄，如此我便將過去學到的資料庫應用於此，試圖幫中心建立一<a><span>管理系統</span></a>來處理財務資訊，也剛好將此用作為「資料庫管理」課程的期末報告，並且獲得了全班最高分的成績。
+				</p>
+				<p class="content-p" id=work_4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;高中升大學時的暑期打工，也是第一次在正式的公司上班，學習服務他人、與各個年齡層的同事相處，增加工作經驗，也為自己增加一些儲蓄。
+				</p>
 			</div>
 		</section>
 		<article class='int'>
 			<a name=3></a>
 			<h3>生活興趣</h3>
-			<hr>
-			<p style="text-align: center;">富有生活熱情的我不管靜態動態的活動都喜歡!</p>
-			<div class=inter>
+			<!-- <hr> -->
+			<div class=inter >
 				<div>
-					<ul style="font-size: 28px;">
-						<li><span>動態</span>
-							<ul>
-								<li>
-									<img src=assert/svg/right.svg>球類運動
-								</li>
-								<li><img src=assert/svg/right.svg>騎單車
-								</li>
-							</ul>
-						</li>
-						<li><span>靜態</span>
-							<ul>
-								<li><img src=assert/svg/right.svg>音樂
-								</li>
-								<li><img src=assert/svg/right.svg>寫字</li>
-								<li><img src=assert/svg/right.svg>手工藝</li>
-							</ul>
-						</li>
+					<ul class=int style="font-size: 28px;">
+						<li onclick="int_show(this,'int_p_1','int_item_1')" id=int_1 class="active">騎單車</li>
+						<li onclick="int_show(this,'int_p_2','int_item_2')" id=int_2 >各式運動</li>
+						<li onclick="int_show(this,'int_p_3','int_item_3')" id=int_3 >音樂</li>
+						<li onclick="int_show(this,'int_p_4','int_item_4')" id=int_4 >寫字</li>
+						<li class="operat-arch" onclick="int_show(this,'int_p_5','int_item_5')" id=int_5 >手工藝<a href="https://www.youtube.com/watch?v=bkoXI7HXJts" target="_blank" style="text-decoration: none;"><span>操作影片</span></a></li>
+						<li onclick="int_show(this,'int_p_6','int_item_6')" id=int_6 class="operat-arch" >圖畫<span onmouseover="int_show(this,'int_p_7','int_item_7')" onmousedown="int_show(this,'int_p_7','int_item_7')" id=int_7>塗鴉</span></li>
 					</ul>
 				</div>
-				<div class=item>
-					<h3 style="text-align: center;">小小作品</h3>
-					<div class=item2>
-						<figcaption>
-							<figure>手描維尼熊</figure>	
-							<img style='margin-left:30px' src=assert/img/hoop.jpg>
-						</figcaption>
-						<figcaption>
-							<a class=arch href=https://www.youtube.com/watch?v=bkoXI7HXJts style='position:relative' target="_blank"><figure>冰棒棍諸葛連弩</figure></a>
-							<img title=點擊觀看操作影片 src=assert/img/arch3.png>
-						</figcaption>
-					</div>
+				<p class="int-p" id=int_p_1 style="display: block;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;騎單車是我除了打桌球外最喜歡的運動了，從幼稚園開始自己就常常騎著腳踏車到處晃，國、高中也都是騎腳踏車通勤，也因此練就了可以放雙手騎車的本領。平時的我喜歡騎著車，聽著音樂、放著雙手享受風吹過身體的感覺，也喜歡騎到我沒去過的地方「探險」，或是在清晨、夜深人靜時漫步(騎)在公園、新式大樓的街道中，欣賞著月光、星空、以及聳立的建築們巧妙的設計。
+				</p>
+				<p class="int-p" id=int_p_2>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;除了打桌球之外，我也喜歡其他的運動技藝，扯鈴、羽球、投籃、游泳、排球、撞球，這些活動。
+				</p>
+				<p class="int-p" id=int_p_3>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;音樂在我的生活中也是不可或缺的事情，除了喜歡聽抒情歌、純音樂，我也很喜歡唱歌、吹奏樂器，從一開始的直笛、也練習過一陣子的豎笛，而現在則是喜歡吹口風琴，由於我也想學鋼琴，而他有著類似鋼琴的按鍵，讓我可以學習彈鋼琴的感覺，如此在未來有機會學習鋼琴時，相信這讓我在初學時能更快的上手鋼琴。<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;雖然我使用的樂器看似簡單，但我藉著他們培養出了一定程度的音感，現在我想要吹奏一首曲子時都不需要去找樂譜，只需要不斷地聽跟嘗試，便能找出其主旋律的音調，在寫成自己的樂譜。
+				</p>
+				<p class="int-p" id=int_p_4>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;從小看著大人們那龍飛鳳舞的簽名，我便也想學習他們「亂撇」，但到了國中才開始發現要把字寫得像藝術品一般，是需要先不斷的練習將字寫正，穩定之後才能隨心所欲地移動。而我在不斷的練習中，漸漸的感覺到抑、揚、頓、挫有如在寫書法的感覺。
+				</p>
+				<p class="int-p" id=int_p_5>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小時候家裡不太能玩電腦，也沒有甚麼手機、遊戲機等，所以閒著沒事會自己嘗試做一些竹槍、弓箭等物品。<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;圖片為諸葛連弩，相傳是諸葛亮在赤壁之戰要對付曹操時所設計的，以前後移動的機關讓弩上弦，而彈匣置於弓機上方，如此在發射之後上方箭矢便可自動落下預備下一次發射。
+				</p>
+				<p class="int-p" id=int_p_6>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小時候的我蠻喜歡畫畫的，國小二、三年級時也曾代表班上參加繪畫比賽並且得名。隨著年齡的增加，開始會觀察角度、陰影，並思考要如何呈現在紙上，才會保有其立體感，在空閒時間也會自己嘗試素描，也教導還就讀國小的弟弟去觀察，試著去畫出一個立體的圖畫。
+				</p>
+				<p class="int-p" id=int_p_7>
+					<span style="margin:1em;font-size: 28px;">發現野生的山地鼠!!</span>
+				</p>
+				<div class="item" onmouseover="int_p_show()" onmouseout="int_p_hidden()">
+					<img id=int_item_1 style="display: block;" src="assert/img/bike2.jpg" alt="">
+					<img id=int_item_2 src="assert/svg/pool-8-ball.svg" style="width: 400px;border:none;">
+					<img id=int_item_3 src="assert/svg/keyboard.svg" style="width: 400px;border:none;" alt="">
+					<img id=int_item_4 src="assert/img/gehwatai.png" style="width: 600px;" alt="">
+					<img id=int_item_5 src="assert/img/arch3.png" style="width: 450px;" alt="">
+					<img id=int_item_6 src="assert/img/hoop.jpg" style="z-index: 2;height: 450px;" alt="">
+					<img id=int_item_7 src="assert/img/graffiti.jpg" alt="">
 				</div>
 			</div>
 		</article>
-		<section class=act>
+		<!-- <section class=act>
 			<a name=4></a>
 			<h3>社團活動</h3>
 			<hr>
@@ -384,11 +425,11 @@
 					</tr>
 				</table>
 			</div>
-		</section>
+		</section> -->
 		<article class=excep>
 			<a name=5></a>
 			<h3>未來展望</h3>
-			<hr>
+			<!-- <hr> -->
 			<div>
 				<div>
 					<h4>人生目標</h4>
@@ -437,27 +478,27 @@
 		</article>
 		<section class=live>
 			<a name=8></a>
-			<h3>日常生活</h3>
-			<hr>
+			<h3>生活照</h3>
+			<!-- <hr> -->
 			<div>
 				<figcaption>
 					<img src=assert/img/pra.jpg>
 					<div class=mask><h5>校隊練習日常</h5></div>
 				</figcaption>
 				<figcaption>
-					<img src=assert/img/bbq.jpg>
-					<div class=mask><h5>中秋烤肉</h5></div>
+					<img src=assert/img/Shimen-Reservoir.jpg alt="">
+					<div class=mask><h5>石門水庫大壩</h5></div>
 				</figcaption>
 				<figcaption>
 					<img src=assert/img/high.jpg>
 					<div class=mask><h5>神秘宗教團體儀式</h5></div>
 				</figcaption>
 				<figcaption>
-					<img src=assert/img/bike2.jpg>
-					<div class=mask><h5>石門水庫單人行</h5></div>
+					<img src=assert/img/hoop-hahaha.jpg>
+					<div class=mask><h5>笑得你心裡發寒</h5></div>
 				</figcaption>
 				<figcaption>
-					<img src=assert/img/bike.jpg>
+					<img src=assert/img/horn-bro.jpg>
 					<div class=mask><h5>單車夜遊</h5></div>
 				</figcaption>
 				<figcaption>
@@ -469,8 +510,9 @@
 	</div>
 	<footer>
 		<p style="margin: 0;
-		padding: 10px;">版權所有:©王聖杰_Wang-Sheng-jie<sub>&nbsp;&nbsp;&nbsp;&nbsp;2019/11/25</sub></p>
+		padding: 10px;">版權所有:©王聖杰_Wang-Sheng-jie<sub>&nbsp;&nbsp;&nbsp;&nbsp;2020/9/18</sub></p>
 	</footer>
+	<script src="assert/js/show-text.js"></script>
 	<script type="text/javascript">
 		var op=false;
 		function ope(){

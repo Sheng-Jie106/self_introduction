@@ -7,7 +7,29 @@ div.exp{/*學習經歷下區塊*/
 div.exp>div{
 	margin: 10px 25px;
 }
-div.exp>div img{border-radius: 50%;}
+div.exp>div:hover{
+	/* border-radius: 50%; */
+	border-bottom: 3px solid #2da8ff;
+}
+div.exp>div:hover h4{
+	color:#0296ff;
+}
+div.exp>div h4{
+	transition-duration:350ms; 
+}
+p.content-p{
+	width: 70%;
+    line-height: 30px;
+	margin: 0 auto;
+	display: none;
+	padding-bottom: 30px;
+	padding-top:20px;
+	text-align: left;
+}
+div.content-p{
+	overflow: hidden;
+	transition-duration:0.5s; 
+}
 
 /*個人資訊樣式*/
 
